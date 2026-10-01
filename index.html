@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark">
+  <title>圖片反轉故事｜離線課堂遊戲</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="game-shell" aria-labelledby="story-title">
+  <header class="topbar"><div><p class="kicker">DIRECTING AI · 7 分鐘破冰</p><h1 id="story-title">圖片反轉故事</h1></div><p id="placeholder-notice" class="status-chip">占位劇情 · 待主創確認</p></header>
+  <nav aria-label="故事進度"><ol id="progress" class="progress"></ol></nav>
+  <section class="stage-grid">
+    <figure id="scene" class="scene" role="img">
+      <svg viewBox="0 0 960 540" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#20304d"/><stop offset="1" stop-color="#111827"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-opacity=".35"/></filter></defs>
+        <rect width="960" height="540" fill="url(#wall)"/><rect y="430" width="960" height="110" fill="#172033"/>
+        <rect x="320" y="65" width="320" height="400" rx="8" fill="#1b6a87" stroke="#78d4e8" stroke-width="6"/><circle cx="585" cy="270" r="14" fill="#ffd166"/>
+        <rect x="406" y="145" width="150" height="76" rx="6" fill="#f7f1dc" transform="rotate(-3 481 183)"/><text id="scene-note" x="481" y="190" text-anchor="middle" fill="#1b2435" font-size="25" font-weight="800">请勿开门</text>
+        <g filter="url(#shadow)"><path d="M214 400h250l-28 100H242z" fill="#b8783f" stroke="#efb56c" stroke-width="5"/><path d="M214 400l65-45h235l-50 45z" fill="#d99a59" stroke="#efb56c" stroke-width="5"/><path d="M464 400l50-45 38 59-88 18z" fill="#985e32" stroke="#efb56c" stroke-width="5"/><path d="M255 500h178" stroke="#56b7d1" stroke-width="12" stroke-linecap="round" opacity=".8"/></g>
+        <g stroke="#ffd166" stroke-width="10" fill="none" stroke-linecap="round"><path d="M735 482V235q0-72 63-72 60 0 60 70"/><path d="M858 233q-10 36-37 14"/></g><circle cx="735" cy="485" r="12" fill="#ffd166"/>
+      </svg><figcaption>自製 SVG 圖形占位場景 · 不含第三方圖片</figcaption>
+    </figure>
+    <article class="story-panel" aria-live="polite"><p id="eyebrow" class="eyebrow"></p><h2 id="stage-heading"></h2><p id="stage-prompt" class="prompt"></p><ul id="clue-list" class="clue-list" aria-label="已揭示線索"></ul></article>
+  </section>
+  <section class="teacher-console" aria-label="老師控制台">
+    <div class="timer-block"><span class="timer-label">觀察計時</span><output id="timer" class="timer" aria-live="polite">00:20</output><div class="timer-actions"><button id="timer-toggle" type="button">開始計時</button><button id="timer-reset" type="button">重設 20 秒</button></div></div>
+    <div class="navigation-actions"><button id="prev" class="secondary" type="button">← 上一幕</button><button id="reset" class="danger" type="button">重置全場 <span class="key">R</span></button><button id="next" class="primary" type="button">下一幕 →</button></div>
+  </section>
+  <p class="keyboard-help">鍵盤：← 上一幕 · → 下一幕 · R 重置（輸入時不觸發）</p>
+  <noscript><p class="noscript">JavaScript 未啟用。請改開同資料夾中的 <a href="fallback.html">fallback.html 靜態降級版</a>。</p></noscript>
+</main><script src="story-data.js"></script><script src="app.js"></script>
+</body></html>
